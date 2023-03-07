@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Back-End", "Back-End", "{BB424180-95F9-4B90-9404-3A4CC3C7209D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Front-End", "Front-End", "{FC067903-0D40-482A-9CE1-ADCCBB3DB872}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.Entities", "Udemy.Restaurant.Entities\Udemy.Restaurant.Entities.csproj", "{4C4294CC-B600-4F68-861B-8A1A19A88F40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.DataAccess", "Udemy.Restaurant.DataAccess\Udemy.Restaurant.DataAccess.csproj", "{51269458-EBAD-4638-A2D9-1F0F68EBE42E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.Business", "Udemy.Restaurant.Business\Udemy.Restaurant.Business.csproj", "{5CB1CE5A-2B7A-4E95-AB76-ACC7226F5879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.Core", "Udemy.Restaurant.Core\Udemy.Restaurant.Core.csproj", "{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C4294CC-B600-4F68-861B-8A1A19A88F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4294CC-B600-4F68-861B-8A1A19A88F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4294CC-B600-4F68-861B-8A1A19A88F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4294CC-B600-4F68-861B-8A1A19A88F40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51269458-EBAD-4638-A2D9-1F0F68EBE42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51269458-EBAD-4638-A2D9-1F0F68EBE42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51269458-EBAD-4638-A2D9-1F0F68EBE42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51269458-EBAD-4638-A2D9-1F0F68EBE42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB1CE5A-2B7A-4E95-AB76-ACC7226F5879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB1CE5A-2B7A-4E95-AB76-ACC7226F5879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB1CE5A-2B7A-4E95-AB76-ACC7226F5879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB1CE5A-2B7A-4E95-AB76-ACC7226F5879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4C4294CC-B600-4F68-861B-8A1A19A88F40} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
+		{51269458-EBAD-4638-A2D9-1F0F68EBE42E} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
+		{5CB1CE5A-2B7A-4E95-AB76-ACC7226F5879} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
+		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2895BF16-CEC4-4718-825B-6E43C302131E}
+	EndGlobalSection
+EndGlobal
