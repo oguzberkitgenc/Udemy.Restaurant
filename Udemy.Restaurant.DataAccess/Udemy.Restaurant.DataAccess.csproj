@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dals\Repository.cs" />
+    <Compile Include="Interfaces\Base\IRepository.cs" />
+    <Compile Include="Interfaces\IEkMalzemeDal.cs" />
+    <Compile Include="Interfaces\IPorsiyonDal.cs" />
+    <Compile Include="Interfaces\ITanimDal.cs" />
+    <Compile Include="Interfaces\IUrunDal.cs" />
     <Compile Include="Mappings\EkMalzemeMap.cs" />
     <Compile Include="Mappings\PorsiyonMap.cs" />
     <Compile Include="Mappings\TanimMap.cs" />
@@ -67,6 +73,7 @@
       <Name>Udemy.Restaurant.Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

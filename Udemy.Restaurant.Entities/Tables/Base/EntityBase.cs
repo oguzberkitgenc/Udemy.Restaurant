@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Udemy.Restaurant.Entities.Interfaces;
 
 namespace Udemy.Restaurant.Entities.Tables.Base
 {
-    public class EntityBase
+    public class EntityBase:IEntity
     {
         public Guid Id { get; set; }
         public string Ekleyen { get; set; }
