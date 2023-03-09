@@ -42,7 +42,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dals\Repository.cs" />
+    <Compile Include="Dals\Base\Repository.cs" />
     <Compile Include="Interfaces\Base\IRepository.cs" />
     <Compile Include="Interfaces\IEkMalzemeDal.cs" />
     <Compile Include="Interfaces\IPorsiyonDal.cs" />
@@ -68,6 +67,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Udemy.Restaurant.Core\Udemy.Restaurant.Core.csproj">
+      <Project>{7281b78a-abb0-4354-9e18-a1ebebdd176c}</Project>
+      <Name>Udemy.Restaurant.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Udemy.Restaurant.Entities\Udemy.Restaurant.Entities.csproj">
       <Project>{4c4294cc-b600-4f68-861b-8a1a19a88f40}</Project>
       <Name>Udemy.Restaurant.Entities</Name>

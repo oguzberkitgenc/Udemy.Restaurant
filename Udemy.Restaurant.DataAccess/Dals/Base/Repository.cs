@@ -7,8 +7,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Udemy.Restaurant.Core.Extensions;
 using Udemy.Restaurant.DataAccess.Interfaces.Base;
 using Udemy.Restaurant.Entities.Interfaces;
+
 
 namespace Udemy.Restaurant.DataAccess.Dals
 {
@@ -19,7 +21,6 @@ namespace Udemy.Restaurant.DataAccess.Dals
         {
             _context = context;
         }
-        private bool disposedValue;
 
         public void Add(TEntity entity)
         {
@@ -82,16 +83,16 @@ namespace Udemy.Restaurant.DataAccess.Dals
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includes)
-        { 
-            return _context.Set<TEntity>().SingleOrDefault(filter); // SingleOrDefault : Bana bi tane filter olarak veri yolla
+        {
+            return _context.Set<TEntity>().MultipleInclude(includes).SingleOrDefault(filter); // SingleOrDefault : Bana bi tane filter olarak veri yolla
         }
 
-        public IEnumerable<TEntity> GetList(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, object>>[] includes)
+        public IEnumerable<TEntity> GetList(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includes)
         {
-             
-            return filter == null 
-                ? _context.Set<TEntity>().AsNoTracking().ToList()  // AsNoTracking: EnityStae durumu önemli değil,// bana tabloyla ilgili ekleme, güncelleme bilgilerinin gelmesini istemiyorum.
-                : _context.Set<TEntity>().Where(filter).AsNoTracking().ToList();  //Filtre boşşsa hiç bir şey yapmadan geri yolla ama filtre doluysa
+
+            return filter == null
+                ? _context.Set<TEntity>().MultipleInclude(includes).AsNoTracking().ToList()  // AsNoTracking: EnityStae durumu önemli değil,// bana tabloyla ilgili ekleme, güncelleme bilgilerinin gelmesini istemiyorum.
+                : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).AsNoTracking().ToList();  //Filtre boşşsa hiç bir şey yapmadan geri yolla ama filtre doluysa
         }
 
         public bool HasChanges()
@@ -100,9 +101,9 @@ namespace Udemy.Restaurant.DataAccess.Dals
                                                                     // her hangi bir değişiklilik varsa true yoksa false geri gönder
         }
 
-        public void Load(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, object>>[] includes)
+        public void Load(Expression<Func<TEntity, bool>> filter, params Expression<Func<TEntity, object>>[] includes)
         {
-            if (filter==null) 
+            if (filter == null)
             {
                 _context.Set<TEntity>().Load();
             }
@@ -110,21 +111,21 @@ namespace Udemy.Restaurant.DataAccess.Dals
             {
                 _context.Set<TEntity>().Where(filter).Load();
             }
-              
+
         }
 
-        public IQueryable<TEntity> Select(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TEntity>> selector, Expression<Func<TEntity, object>>[] includes)
+        public IQueryable<TEntity> Select(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TEntity>> selector, params Expression<Func<TEntity, object>>[] includes)
         {
-            return filter == null 
-                ? _context.Set<TEntity>().Select(selector)
-                : _context.Set<TEntity>().Where(filter).Select(selector);
+            return filter == null
+                ? _context.Set<TEntity>().MultipleInclude(includes).Select(selector)
+                : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).Select(selector);
         }
 
-        public IQueryable<TResult> Select<TResult>(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TResult>> selector, Expression<Func<TEntity, object>>[] includes)
+        public IQueryable<TResult> Select<TResult>(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, TResult>> selector, params Expression<Func<TEntity, object>>[] includes)
         {
             return filter == null ?
-                 _context.Set<TEntity>().Select(selector) 
-                 : _context.Set<TEntity>().Where(filter).Select(selector);
+                 _context.Set<TEntity>().MultipleInclude(includes).Select(selector)
+                 : _context.Set<TEntity>().MultipleInclude(includes).Where(filter).Select(selector);
         }
 
         public BindingList<TEntity> BindingList()
@@ -133,6 +134,10 @@ namespace Udemy.Restaurant.DataAccess.Dals
         }
 
 
+
+
+     //   #region IDisposable Suuport
+        private bool disposedValue = false;
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
@@ -163,3 +168,5 @@ namespace Udemy.Restaurant.DataAccess.Dals
         }
     }
 }
+//context.Urunler.Include(b=> b.UrunGrup).Include(b=>b.EkMalzemeler).ToList();
+//context.Urunler.GetList(Filtre,b=>b.UrunGrup,b=>b.Porsiyonlar,b=>b.EkMalzemeler);
