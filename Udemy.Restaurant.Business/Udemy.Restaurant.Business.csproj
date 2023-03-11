@@ -52,6 +52,8 @@
     <Compile Include="Services\IPorsiyonServices.cs" />
     <Compile Include="Services\ITanimServices.cs" />
     <Compile Include="Services\IUrunServices.cs" />
+    <Compile Include="Workers\IWorker.cs" />
+    <Compile Include="Workers\RestaurantWorker.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Udemy.Restaurant.DataAccess\Udemy.Restaurant.DataAccess.csproj">
@@ -62,6 +64,9 @@
       <Project>{4c4294cc-b600-4f68-861b-8a1a19a88f40}</Project>
       <Name>Udemy.Restaurant.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Validations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
