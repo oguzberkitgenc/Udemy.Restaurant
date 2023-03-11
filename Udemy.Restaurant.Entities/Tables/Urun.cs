@@ -10,7 +10,7 @@ namespace Udemy.Restaurant.Entities.Tables
     public class Urun : EntityBase
     {
         public string Barkod { get; set; }
-        public string Adı { get; set; }
+        public string Adi { get; set; }
         public byte[] Fotograf { get; set; }
         public ICollection<Porsiyon> Porsiyonlar { get; set; }
         public ICollection<EkMalzeme> EkMalzemeler { get; set; }
