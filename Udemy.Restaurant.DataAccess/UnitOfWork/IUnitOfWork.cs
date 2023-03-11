@@ -13,7 +13,7 @@ namespace Udemy.Restaurant.DataAccess.UnitOfWork
     {
         IRepository<TEntity> Dal<TEntity>() where TEntity : class,IEntity,new();
         bool HasChanges(); // Database'deki bütün tablolardaki her hangi bir değişikliği sorgula 
-        bool DetectChanges(); // Değişiklikleri fark et (Context reflesh / tazeleme)
+        void DetectChanges(); // Değişiklikleri fark et (Context reflesh / tazeleme)
         bool Commit(); // En son değişiklikleri veritabanına aktar
 
     }
