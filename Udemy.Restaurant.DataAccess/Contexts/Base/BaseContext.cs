@@ -39,7 +39,6 @@ namespace Udemy.Restaurant.DataAccess.Contexts.Base
                 // ID kolonun anlaşabilmesi için 
                 c.HasKey(e => e.Id);
 
-
                 c.Property(e=>e.Ekleyen).HasMaxLength(30);
                 c.Property(e=>e.Duzenleyen).HasMaxLength(30);
                 c.Property(e => e.Aciklama).HasMaxLength(200);
@@ -48,6 +47,9 @@ namespace Udemy.Restaurant.DataAccess.Contexts.Base
                 c.Property(e => e.Duzenleyen).HasColumnName("Duzenleyen");
                 c.Property(e => e.Ekleyen).HasColumnName("Ekleyen");
                 c.Property(e => e.Aciklama).HasColumnName("Açıklama");
+                c.Property(e => e.DuzenlenmeTarihi).HasColumnName("DuzenlemeTarihi");
+                c.Property(e => e.EklenmeTarihi).HasColumnName("EklenmeTarihi");
+
             });
         }
 
