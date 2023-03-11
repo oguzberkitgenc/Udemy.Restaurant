@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.Business",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.Core", "Udemy.Restaurant.Core\Udemy.Restaurant.Core.csproj", "{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.UI.BackOffice", "Udemy.Restaurant.UI.BackOffice\Udemy.Restaurant.UI.BackOffice.csproj", "{9E500FD9-E183-4EDD-B0F4-67B8E01E1502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.UI.FrontOffice", "Udemy.Restaurant.UI.FrontOffice\Udemy.Restaurant.UI.FrontOffice.csproj", "{04E59E61-CB1C-477B-B9D5-7A555A129DA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E500FD9-E183-4EDD-B0F4-67B8E01E1502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E500FD9-E183-4EDD-B0F4-67B8E01E1502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E500FD9-E183-4EDD-B0F4-67B8E01E1502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E500FD9-E183-4EDD-B0F4-67B8E01E1502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E59E61-CB1C-477B-B9D5-7A555A129DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E59E61-CB1C-477B-B9D5-7A555A129DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E59E61-CB1C-477B-B9D5-7A555A129DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E59E61-CB1C-477B-B9D5-7A555A129DA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 		{51269458-EBAD-4638-A2D9-1F0F68EBE42E} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
 		{5CB1CE5A-2B7A-4E95-AB76-ACC7226F5879} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
 		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
+		{9E500FD9-E183-4EDD-B0F4-67B8E01E1502} = {FC067903-0D40-482A-9CE1-ADCCBB3DB872}
+		{04E59E61-CB1C-477B-B9D5-7A555A129DA0} = {FC067903-0D40-482A-9CE1-ADCCBB3DB872}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2895BF16-CEC4-4718-825B-6E43C302131E}
