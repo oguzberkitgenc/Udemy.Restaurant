@@ -21,9 +21,16 @@ namespace Udemy.Restaurant.DataAccess.UnitOfWork
         public IPorsiyonDal PorsiyonDal { get; set; }
         public IEkMalzemeDal EkMalzemeDal { get; set; }
 
-        public RestaurantUnitOfWork(RestaurantContext context)
+        public RestaurantUnitOfWork(string connectionString=null)
         {
-            _context = context;
+            if (connectionString==null)
+            {
+                _context= new RestaurantContext(GetConnectionStringInfo.Get());
+            }
+            else
+            {
+                _context = new RestaurantContext(connectionString);
+            }
             UrunDal = new UrunDal(_context);
             TanimDal = new TanimDal(_context);
             PorsiyonDal = new PorsiyonDal(_context);
