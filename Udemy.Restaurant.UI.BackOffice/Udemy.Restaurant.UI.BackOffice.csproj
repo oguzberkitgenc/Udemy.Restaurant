@@ -79,6 +79,12 @@
     <Compile Include="Urun\FrmUrun.Designer.cs">
       <DependentUpon>FrmUrun.cs</DependentUpon>
     </Compile>
+    <Compile Include="Urun\frmUrunIslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urun\frmUrunIslem.Designer.cs">
+      <DependentUpon>frmUrunIslem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AnaMenu\FrmAnaMenu.resx">
       <DependentUpon>FrmAnaMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +100,9 @@
     </Compile>
     <EmbeddedResource Include="Urun\FrmUrun.resx">
       <DependentUpon>FrmUrun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urun\frmUrunIslem.resx">
+      <DependentUpon>frmUrunIslem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="packages.config" />
