@@ -63,6 +63,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="Udemy.Restaurant.UserControls">
+      <HintPath>..\Udemy.Restaurant.UserControls\obj\Debug\Udemy.Restaurant.UserControls.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnaMenu\FrmAnaMenu.cs">

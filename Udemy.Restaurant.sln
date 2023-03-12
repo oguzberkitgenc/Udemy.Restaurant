@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.UI.BackOff
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.UI.FrontOffice", "Udemy.Restaurant.UI.FrontOffice\Udemy.Restaurant.UI.FrontOffice.csproj", "{04E59E61-CB1C-477B-B9D5-7A555A129DA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Udemy.Restaurant.UserControls", "Udemy.Restaurant.UserControls\Udemy.Restaurant.UserControls.csproj", "{7CE8F4D0-7CFB-42A7-ACEB-88D7C9D719D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{04E59E61-CB1C-477B-B9D5-7A555A129DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04E59E61-CB1C-477B-B9D5-7A555A129DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04E59E61-CB1C-477B-B9D5-7A555A129DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE8F4D0-7CFB-42A7-ACEB-88D7C9D719D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE8F4D0-7CFB-42A7-ACEB-88D7C9D719D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE8F4D0-7CFB-42A7-ACEB-88D7C9D719D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE8F4D0-7CFB-42A7-ACEB-88D7C9D719D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{7281B78A-ABB0-4354-9E18-A1EBEBDD176C} = {BB424180-95F9-4B90-9404-3A4CC3C7209D}
 		{9E500FD9-E183-4EDD-B0F4-67B8E01E1502} = {FC067903-0D40-482A-9CE1-ADCCBB3DB872}
 		{04E59E61-CB1C-477B-B9D5-7A555A129DA0} = {FC067903-0D40-482A-9CE1-ADCCBB3DB872}
+		{7CE8F4D0-7CFB-42A7-ACEB-88D7C9D719D9} = {FC067903-0D40-482A-9CE1-ADCCBB3DB872}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2895BF16-CEC4-4718-825B-6E43C302131E}
