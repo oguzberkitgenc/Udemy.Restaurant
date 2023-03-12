@@ -12,6 +12,7 @@ namespace Udemy.Restaurant.DataAccess.Functions
     {
         public static void Add(DbContext context)
         {
+            //Default olarak Eklenme Tarihi , Düzenleme Tarihi ve Düzenleyen Tarih. İlerleyen kısımlarda bura düzenlenebilir
             foreach (var entry in context.ChangeTracker.Entries()) // Context içinde değişenleri dolaş
             {
                 EntityBase changingEntity = (EntityBase)entry.Entity;

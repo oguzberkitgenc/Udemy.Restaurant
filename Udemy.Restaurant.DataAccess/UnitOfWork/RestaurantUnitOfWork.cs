@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Udemy.Restaurant.Core.Functions;
 using Udemy.Restaurant.DataAccess.Contexts.Restaurant;
 using Udemy.Restaurant.DataAccess.Dals;
 using Udemy.Restaurant.DataAccess.Functions;
@@ -25,7 +26,7 @@ namespace Udemy.Restaurant.DataAccess.UnitOfWork
         {
             if (connectionString==null)
             {
-                _context= new RestaurantContext(GetConnectionStringInfo.Get());
+                _context= new RestaurantContext(ConnectionStringInfo.Get());
             }
             else
             {

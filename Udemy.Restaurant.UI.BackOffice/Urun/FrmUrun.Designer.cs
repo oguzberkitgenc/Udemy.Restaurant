@@ -35,8 +35,8 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridControlUrunler = new DevExpress.XtraGrid.GridControl();
+            this.gridUrunler = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colFotograf = new DevExpress.XtraGrid.Columns.GridColumn();
             this.picFotograf = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.colBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,8 +45,8 @@
             this.colFotografEkle = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnFotografEkle = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlUrunler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotograf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFotografEkle)).BeginInit();
             this.SuspendLayout();
@@ -129,31 +129,31 @@
             this.simpleButton1.TabIndex = 0;
             this.simpleButton1.Text = "Ekle";
             // 
-            // gridControl1
+            // gridControlUrunler
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 43);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridControlUrunler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlUrunler.Location = new System.Drawing.Point(0, 43);
+            this.gridControlUrunler.MainView = this.gridUrunler;
+            this.gridControlUrunler.Name = "gridControlUrunler";
+            this.gridControlUrunler.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnFotografEkle,
             this.picFotograf});
-            this.gridControl1.Size = new System.Drawing.Size(1241, 461);
-            this.gridControl1.TabIndex = 2;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridControlUrunler.Size = new System.Drawing.Size(1241, 461);
+            this.gridControlUrunler.TabIndex = 2;
+            this.gridControlUrunler.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridUrunler});
             // 
-            // gridView1
+            // gridUrunler
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridUrunler.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colFotograf,
             this.colBarkod,
             this.colAdi,
             this.colUrunGrup,
             this.colFotografEkle});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.RowHeight = 100;
+            this.gridUrunler.GridControl = this.gridControlUrunler;
+            this.gridUrunler.Name = "gridUrunler";
+            this.gridUrunler.RowHeight = 100;
             // 
             // colFotograf
             // 
@@ -223,14 +223,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 570);
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridControlUrunler);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelControl1);
             this.Name = "FrmUrun";
             this.Text = "FrmUrun";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlUrunler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridUrunler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotograf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFotografEkle)).EndInit();
             this.ResumeLayout(false);
@@ -246,8 +246,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControlUrunler;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridUrunler;
         private DevExpress.XtraGrid.Columns.GridColumn colFotograf;
         private DevExpress.XtraGrid.Columns.GridColumn colBarkod;
         private DevExpress.XtraGrid.Columns.GridColumn colAdi;

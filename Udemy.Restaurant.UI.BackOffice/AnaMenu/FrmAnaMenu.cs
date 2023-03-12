@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Udemy.Restaurant.Core.Function;
+using Udemy.Restaurant.Core.Functions;
 using Udemy.Restaurant.UI.BackOffice.Urun;
 
 namespace Udemy.Restaurant.UI.BackOffice
@@ -15,6 +17,11 @@ namespace Udemy.Restaurant.UI.BackOffice
         public FrmAnaMenu()
         {
             InitializeComponent();
+            if (!ConnectionStringInfo.Check())
+            {
+                FrmSetupConnection form = new FrmSetupConnection();
+                form.ShowDialog();
+            }
         }
 
         private void btnUrun_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
