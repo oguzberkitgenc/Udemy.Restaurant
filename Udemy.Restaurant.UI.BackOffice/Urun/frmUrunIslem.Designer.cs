@@ -55,6 +55,7 @@
             this.colPorsiyonCarpan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPorsiyonBirim = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupPorsiyonMenu = new DevExpress.XtraEditors.GroupControl();
+            this.controlMenuPorsiyon = new Udemy.Restaurant.UserControls.ControlMenuKayit();
             this.groupPorsiyonBilgi = new DevExpress.XtraEditors.GroupControl();
             this.txtBirim = new DevExpress.XtraEditors.ButtonEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -73,6 +74,7 @@
             this.colMalzemeFiyat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMalzemeAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupMalzemeMenu = new DevExpress.XtraEditors.GroupControl();
+            this.controlMenuEkMalzeme = new Udemy.Restaurant.UserControls.ControlMenuKayit();
             this.groupEkMalzeme = new DevExpress.XtraEditors.GroupControl();
             this.txtMalzemeAciklama = new DevExpress.XtraEditors.MemoEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -80,7 +82,6 @@
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtMalzemeAdi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
-            this.controlMenuKayit1 = new Udemy.Restaurant.UserControls.ControlMenuKayit();
             ((System.ComponentModel.ISupportInitialize)(this.groupAltMenu)).BeginInit();
             this.groupAltMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -109,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControlMalzeme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridMalzeme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupMalzemeMenu)).BeginInit();
+            this.groupMalzemeMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupEkMalzeme)).BeginInit();
             this.groupEkMalzeme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMalzemeAciklama.Properties)).BeginInit();
@@ -154,6 +156,7 @@
             this.btnKaydet.Size = new System.Drawing.Size(90, 47);
             this.btnKaydet.TabIndex = 1;
             this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // btnKapat
             // 
@@ -394,13 +397,29 @@
             // 
             // groupPorsiyonMenu
             // 
-            this.groupPorsiyonMenu.Controls.Add(this.controlMenuKayit1);
+            this.groupPorsiyonMenu.Controls.Add(this.controlMenuPorsiyon);
             this.groupPorsiyonMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupPorsiyonMenu.Location = new System.Drawing.Point(0, 173);
             this.groupPorsiyonMenu.Name = "groupPorsiyonMenu";
             this.groupPorsiyonMenu.Size = new System.Drawing.Size(668, 100);
             this.groupPorsiyonMenu.TabIndex = 2;
             this.groupPorsiyonMenu.Text = "Porsiyon Menüsü";
+            // 
+            // controlMenuPorsiyon
+            // 
+            this.controlMenuPorsiyon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlMenuPorsiyon.KapatVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            this.controlMenuPorsiyon.KayitAc = false;
+            this.controlMenuPorsiyon.Location = new System.Drawing.Point(2, 23);
+            this.controlMenuPorsiyon.Name = "controlMenuPorsiyon";
+            this.controlMenuPorsiyon.SecVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            this.controlMenuPorsiyon.Size = new System.Drawing.Size(664, 75);
+            this.controlMenuPorsiyon.TabIndex = 0;
+            this.controlMenuPorsiyon.EkleClick += new System.EventHandler(this.controlMenuPorsiyon_EkleClick);
+            this.controlMenuPorsiyon.DuzenleClick += new System.EventHandler(this.controlMenuPorsiyon_DuzenleClick);
+            this.controlMenuPorsiyon.SilClick += new System.EventHandler(this.controlMenuPorsiyon_SilClick);
+            this.controlMenuPorsiyon.KaydetClick += new System.EventHandler(this.controlMenuPorsiyon_KaydetClick);
+            this.controlMenuPorsiyon.VazgecClick += new System.EventHandler(this.controlMenuPorsiyon_VazgecClick);
             // 
             // groupPorsiyonBilgi
             // 
@@ -420,6 +439,7 @@
             this.groupPorsiyonBilgi.Size = new System.Drawing.Size(668, 173);
             this.groupPorsiyonBilgi.TabIndex = 1;
             this.groupPorsiyonBilgi.Text = "Porsiyon Bilgisi";
+            this.groupPorsiyonBilgi.Visible = false;
             // 
             // txtBirim
             // 
@@ -586,12 +606,29 @@
             // 
             // groupMalzemeMenu
             // 
+            this.groupMalzemeMenu.Controls.Add(this.controlMenuEkMalzeme);
             this.groupMalzemeMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupMalzemeMenu.Location = new System.Drawing.Point(0, 173);
             this.groupMalzemeMenu.Name = "groupMalzemeMenu";
             this.groupMalzemeMenu.Size = new System.Drawing.Size(668, 100);
             this.groupMalzemeMenu.TabIndex = 5;
             this.groupMalzemeMenu.Text = "Ek Malzeme Menüsü";
+            // 
+            // controlMenuEkMalzeme
+            // 
+            this.controlMenuEkMalzeme.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.controlMenuEkMalzeme.KapatVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            this.controlMenuEkMalzeme.KayitAc = false;
+            this.controlMenuEkMalzeme.Location = new System.Drawing.Point(2, 23);
+            this.controlMenuEkMalzeme.Name = "controlMenuEkMalzeme";
+            this.controlMenuEkMalzeme.SecVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
+            this.controlMenuEkMalzeme.Size = new System.Drawing.Size(664, 75);
+            this.controlMenuEkMalzeme.TabIndex = 0;
+            this.controlMenuEkMalzeme.EkleClick += new System.EventHandler(this.controlMenuEkMalzeme_EkleClick);
+            this.controlMenuEkMalzeme.DuzenleClick += new System.EventHandler(this.controlMenuEkMalzeme_DuzenleClick);
+            this.controlMenuEkMalzeme.SilClick += new System.EventHandler(this.controlMenuEkMalzeme_SilClick);
+            this.controlMenuEkMalzeme.KaydetClick += new System.EventHandler(this.controlMenuEkMalzeme_KaydetClick);
+            this.controlMenuEkMalzeme.VazgecClick += new System.EventHandler(this.controlMenuEkMalzeme_VazgecClick);
             // 
             // groupEkMalzeme
             // 
@@ -607,6 +644,7 @@
             this.groupEkMalzeme.Size = new System.Drawing.Size(668, 173);
             this.groupEkMalzeme.TabIndex = 4;
             this.groupEkMalzeme.Text = "Ek Malzeme Bilgisi";
+            this.groupEkMalzeme.Visible = false;
             // 
             // txtMalzemeAciklama
             // 
@@ -671,16 +709,6 @@
             this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "Malzeme Adı";
             // 
-            // controlMenuKayit1
-            // 
-            this.controlMenuKayit1.KapatVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            this.controlMenuKayit1.KayitAc = false;
-            this.controlMenuKayit1.Location = new System.Drawing.Point(13, 27);
-            this.controlMenuKayit1.Name = "controlMenuKayit1";
-            this.controlMenuKayit1.SecVisibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Always;
-            this.controlMenuKayit1.Size = new System.Drawing.Size(642, 56);
-            this.controlMenuKayit1.TabIndex = 0;
-            // 
             // frmUrunIslem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -723,6 +751,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControlMalzeme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridMalzeme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupMalzemeMenu)).EndInit();
+            this.groupMalzemeMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupEkMalzeme)).EndInit();
             this.groupEkMalzeme.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtMalzemeAciklama.Properties)).EndInit();
@@ -741,7 +770,6 @@
         private DevExpress.XtraBars.Navigation.TabPane tabPane1;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabUrunBilgi;
         private DevExpress.XtraEditors.GroupControl groupUrunBilgi;
-        private DevExpress.XtraEditors.TextEdit txtBarkod;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabPorsiyon;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabEkMalzeme;
@@ -785,6 +813,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMalzemeAdi;
         private DevExpress.XtraGrid.Columns.GridColumn colMalzemeFiyat;
         private DevExpress.XtraGrid.Columns.GridColumn colMalzemeAciklama;
-        private UserControls.ControlMenuKayit controlMenuKayit1;
+        private UserControls.ControlMenuKayit controlMenuPorsiyon;
+        private UserControls.ControlMenuKayit controlMenuEkMalzeme;
+        private DevExpress.XtraEditors.TextEdit txtBarkod;
     }
 }

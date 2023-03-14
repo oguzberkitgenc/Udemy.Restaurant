@@ -1,13 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System;
 using Udemy.Restaurant.Business.Workers;
 
 namespace Udemy.Restaurant.UI.BackOffice.Urun
@@ -23,8 +14,13 @@ namespace Udemy.Restaurant.UI.BackOffice.Urun
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            frmUrunIslem form = new frmUrunIslem();
-            form.ShowDialog();
+            frmUrunIslem ff = new frmUrunIslem(new Entities.Tables.Urun());
+            ff.ShowDialog();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
