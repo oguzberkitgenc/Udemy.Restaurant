@@ -271,8 +271,10 @@
             this.txtKategori.Name = "txtKategori";
             this.txtKategori.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtKategori.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtKategori.Size = new System.Drawing.Size(517, 20);
             this.txtKategori.TabIndex = 5;
+            this.txtKategori.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtKategori_ButtonClick);
             // 
             // labelControl4
             // 
@@ -447,8 +449,10 @@
             this.txtBirim.Name = "txtBirim";
             this.txtBirim.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtBirim.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtBirim.Size = new System.Drawing.Size(544, 20);
             this.txtBirim.TabIndex = 11;
+            this.txtBirim.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.txtBirim_ButtonClick);
             // 
             // labelControl11
             // 

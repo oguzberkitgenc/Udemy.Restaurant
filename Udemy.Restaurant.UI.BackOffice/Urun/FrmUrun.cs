@@ -20,7 +20,8 @@ namespace Udemy.Restaurant.UI.BackOffice.Urun
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-           
+            frmUrunIslem form = new frmUrunIslem((Entities.Tables.Urun)gridUrunler.GetFocusedRow());
+            form.ShowDialog();
         }
     }
 }

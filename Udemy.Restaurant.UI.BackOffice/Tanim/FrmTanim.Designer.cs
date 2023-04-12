@@ -30,10 +30,10 @@
         {
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupTanimBilgi = new DevExpress.XtraEditors.GroupControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTanim = new DevExpress.XtraEditors.TextEdit();
             this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
+            this.txtTanim = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.controlMenu = new Udemy.Restaurant.UserControls.ControlMenuKayit();
             this.gridControlTanim = new DevExpress.XtraGrid.GridControl();
@@ -42,8 +42,8 @@
             this.colAciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupTanimBilgi)).BeginInit();
             this.groupTanimBilgi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTanim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTanim.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTanim)).BeginInit();
@@ -76,18 +76,19 @@
             this.groupTanimBilgi.TabIndex = 2;
             this.groupTanimBilgi.Text = "Tanım İşlemleri";
             // 
-            // labelControl2
+            // txtAciklama
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseTextOptions = true;
-            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl2.Location = new System.Drawing.Point(9, 27);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(99, 20);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Tanım";
+            this.txtAciklama.Location = new System.Drawing.Point(129, 55);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(456, 67);
+            this.txtAciklama.TabIndex = 4;
+            // 
+            // txtTanim
+            // 
+            this.txtTanim.Location = new System.Drawing.Point(129, 28);
+            this.txtTanim.Name = "txtTanim";
+            this.txtTanim.Size = new System.Drawing.Size(456, 20);
+            this.txtTanim.TabIndex = 3;
             // 
             // labelControl3
             // 
@@ -102,19 +103,18 @@
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "Açıklama";
             // 
-            // txtTanim
+            // labelControl2
             // 
-            this.txtTanim.Location = new System.Drawing.Point(129, 28);
-            this.txtTanim.Name = "txtTanim";
-            this.txtTanim.Size = new System.Drawing.Size(456, 20);
-            this.txtTanim.TabIndex = 3;
-            // 
-            // txtAciklama
-            // 
-            this.txtAciklama.Location = new System.Drawing.Point(129, 55);
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(456, 67);
-            this.txtAciklama.TabIndex = 4;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseTextOptions = true;
+            this.labelControl2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl2.Location = new System.Drawing.Point(9, 27);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(99, 20);
+            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Text = "Tanım";
             // 
             // groupControl2
             // 
@@ -154,7 +154,6 @@
             this.gridControlTanim.TabIndex = 4;
             this.gridControlTanim.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridTanim});
-            this.gridControlTanim.Visible = false;
             // 
             // gridTanim
             // 
@@ -197,8 +196,8 @@
             this.Text = "FrmTanim";
             ((System.ComponentModel.ISupportInitialize)(this.groupTanimBilgi)).EndInit();
             this.groupTanimBilgi.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtTanim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTanim.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlTanim)).EndInit();

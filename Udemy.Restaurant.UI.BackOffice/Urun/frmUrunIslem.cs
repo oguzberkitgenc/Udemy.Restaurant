@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using Udemy.Restaurant.Business.Workers;
+using Udemy.Restaurant.Entities.Enums;
 using Udemy.Restaurant.Entities.Tables;
+using Udemy.Restaurant.UI.BackOffice.Tanim;
 
 namespace Udemy.Restaurant.UI.BackOffice.Urun
 {
@@ -65,7 +67,7 @@ namespace Udemy.Restaurant.UI.BackOffice.Urun
             controlMenuPorsiyon.KayitAc = true;
             groupPorsiyonBilgi.Visible = true;
             _porsiyonEntity = new Porsiyon();
-            _porsiyonEntity.UrunId = _urunEntity.Id = _porsiyonEntity.Id;
+            _porsiyonEntity.UrunId = _urunEntity.Id;
             PorsiyonBindig();
         }
 
@@ -100,6 +102,7 @@ namespace Udemy.Restaurant.UI.BackOffice.Urun
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            worker.UrunService.AddOrUpdate(_urunEntity);
             worker.Commit();
             Close();
         }
@@ -144,6 +147,28 @@ namespace Udemy.Restaurant.UI.BackOffice.Urun
 
             controlMenuEkMalzeme.KayitAc = false;
             groupEkMalzeme.Visible = false;
+        }
+
+        private void txtKategori_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            FrmTanim form = new FrmTanim(TanimTip.UrunGrup);
+            form.ShowDialog();
+            if (form.Secildi==true)
+            {
+                txtKategori.Text = form.tanimEntity.Adi;
+                _urunEntity.UrunGrupId = form.tanimEntity.Id;
+            }
+        }
+
+        private void txtBirim_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            FrmTanim form = new FrmTanim(TanimTip.Birim);
+            form.ShowDialog();
+            if (form.Secildi==true)
+            {
+                txtBirim.Text = form.tanimEntity.Adi;
+                _porsiyonEntity.BirimId = form.tanimEntity.Id;
+            }
         }
     }
 }

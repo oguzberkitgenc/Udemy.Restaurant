@@ -18,13 +18,14 @@ namespace Udemy.Restaurant.UI.BackOffice.Tanim
     {
         RestaurantWorker worker = new RestaurantWorker();
         public bool Secildi = false;
+        private TanimTip _tanimTip;
         public Entities.Tables.Tanim tanimEntity;
         public FrmTanim(TanimTip tanimTip)
         {
             InitializeComponent();
+            _tanimTip = tanimTip;
             worker.TanimService.Load(c => c.TanimTip == tanimTip);
             gridControlTanim.DataSource = worker.TanimService.BindingList();
-            TanimBinding();
         }
         void TanimBinding()
         {
@@ -54,7 +55,7 @@ namespace Udemy.Restaurant.UI.BackOffice.Tanim
             controlMenu.KayitAc = true;
             groupTanimBilgi.Visible = true;
             tanimEntity = (Entities.Tables.Tanim)gridTanim.GetFocusedRow();
-
+            TanimBinding();
         }
 
         private void controlMenu_SilClick(object sender, EventArgs e)
@@ -69,7 +70,9 @@ namespace Udemy.Restaurant.UI.BackOffice.Tanim
         {
             controlMenu.KayitAc = false;
             groupTanimBilgi.Visible = false;
+            tanimEntity.TanimTip = _tanimTip;
             worker.TanimService.AddOrUpdate(tanimEntity);
+            worker.Commit();
         }
 
         private void controlMenu_VazgecClick(object sender, EventArgs e)
