@@ -64,12 +64,16 @@ namespace Udemy.Restaurant.DataAccess.Contexts.Restaurant
 
 			});
 			// HasRequired: Kesin olmalı /- With Many: Çok ilişki - HasForeignKey Kolon ismi        //WillCascadeOnDelete: Porsiyon tablosu ürün tablosu silindiğinde ürünün bağlı olduğu porsiyonlarda silinsin
+			//İlişki tanımaları TEK olandan başlar
 			//Ürün İlişkileri
 			modelBuilder.Entity<Porsiyon>().HasRequired(c => c.Urun).WithMany(c => c.Porsiyonlar).HasForeignKey(c => c.UrunId).WillCascadeOnDelete(true);
 			modelBuilder.Entity<Porsiyon>().HasRequired(c => c.Birim).WithOptional().Map(c => c.MapKey("BirimId"));
+
 			modelBuilder.Entity<EkMalzeme>().HasRequired(c => c.Urun).WithMany(c => c.EkMalzemeler).HasForeignKey(c => c.UrunId);
 			modelBuilder.Entity<Urun>().HasRequired(c => c.UrunGrup).WithOptional().Map(c => c.MapKey("UrunGrupId"));
 			//Müşteri İlişkileri
+			modelBuilder.Entity<Telefon>().HasRequired(c => c.Musteri).WithMany(c => c.Telefonlar).HasForeignKey(c => c.MusteriId);
+			modelBuilder.Entity<Adres>().HasRequired(c => c.Musteri).WithMany(c => c.Adresler).HasForeignKey(c => c.MusteriId);
 
 			modelBuilder.Configurations.Add(new UrunMap());
 			modelBuilder.Configurations.Add(new TanimMap());

@@ -15,5 +15,7 @@ namespace Udemy.Restaurant.Entities.Tables
 		public string Ilce { get; set; }
 		public string Semt { get; set; }
 		public string Adresi { get; set; }
+		public Guid MusteriId { get; set; }
+		public virtual Musteri Musteri { get; set; }
 	}
 }
