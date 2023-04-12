@@ -67,9 +67,12 @@
     <Compile Include="Services\ITanimServices.cs" />
     <Compile Include="Services\ITelefonService.cs" />
     <Compile Include="Services\IUrunServices.cs" />
+    <Compile Include="Validations\AdresValidator.cs" />
     <Compile Include="Validations\EkMalzemeValidation.cs" />
+    <Compile Include="Validations\MusteriValidator.cs" />
     <Compile Include="Validations\PorsiyonValidation.cs" />
     <Compile Include="Validations\TanimValidator.cs" />
+    <Compile Include="Validations\TelefonValidator.cs" />
     <Compile Include="Validations\UrunValidator.cs" />
     <Compile Include="Workers\IWorker.cs" />
     <Compile Include="Workers\RestaurantWorker.cs" />

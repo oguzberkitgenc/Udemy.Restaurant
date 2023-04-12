@@ -19,7 +19,6 @@ namespace Udemy.Restaurant.Business.Workers
         public IMusteriService MusteriService { get; set; }
         public ITelefonService TelefonService { get; set; }
         public IAdresService AdresService { get; set; }
-
         public RestaurantWorker(string connectionString=null)
         {
             //RestaruntUnitOfWork'de kontrol etmesi ve yapması gerekenler yazıyor. O yüzden burada tekrar yazmaya gerek yok
